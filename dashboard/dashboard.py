@@ -14,3 +14,12 @@ with col1:
 with col2:
     weathersit_data = data.groupby(by=["weathersit"],as_index=False)[["cnt"]].sum()
     st.bar_chart(weathersit_data,x="weathersit",y=["cnt"])
+
+col3, col4 = st.columns(2)
+
+with col3:
+    season_data = data.groupby(by=["season"],as_index=False)[["cnt"]].sum()
+    st.bar_chart(season_data,x="season",y=["cnt"])
+with col4:
+    yr_data = data.groupby(by=["yr"],as_index=False)[["cnt"]].sum()
+    st.bar_chart(yr_data,x="yr",y=["cnt"])
