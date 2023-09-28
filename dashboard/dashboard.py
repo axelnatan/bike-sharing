@@ -4,7 +4,7 @@ import pandas as pd
 st.title("Bike Sharing Dashboard")
 st.write("by : Axelino Natanael Ndahawali")
 
-data = pd.read_csv("main_data.csv")
+data = pd.read_csv("./dashboard/main_data.csv")
 
 col1, col2 = st.columns(2)
 
